@@ -1,0 +1,315 @@
+[27-Feb-2016 19:06:39 UTC] PHP Fatal error:  Class 'Stripe\Stripe' not found in /home/sgrutman978/public_html/wristband/charge.php on line 6
+[27-Feb-2016 19:25:35 UTC] PHP Fatal error:  Class 'Stripe\Stripe' not found in /home/sgrutman978/public_html/wristband/charge.php on line 13
+[27-Feb-2016 19:26:13 UTC] PHP Fatal error:  Class 'Stripe' not found in /home/sgrutman978/public_html/wristband/charge.php on line 13
+[27-Feb-2016 19:38:08 UTC] PHP Fatal error:  Class 'Stripe\Stripe' not found in /home/sgrutman978/public_html/wristband/charge.php on line 9
+[27-Feb-2016 19:39:54 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\Authentication' with message 'This API call cannot be made with a publishable API key. Please use a secret API key. You can find a list of your API keys at https://dashboard.stripe.com/account/apikeys.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:105 from API request 'req_7zCJxYjTlPImoX'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 401, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 401, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sg in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 105
+[27-Feb-2016 19:41:11 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jDw72eZvKYlo2CQAUJDTKS' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zCK2GZLtfTU02'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 19:48:50 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jE3W2eZvKYlo2C9tJOqJdK' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zCSvqadMqhX2i'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 19:54:11 UTC] PHP Fatal error:  Class 'Stripe\Stripe' not found in /home/sgrutman978/public_html/wristband/charge.php on line 9
+[27-Feb-2016 19:57:47 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jECC2eZvKYlo2C0KvtxTtb' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zCb3KG0lU7zYP'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 19:58:22 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jECl2eZvKYlo2C7NOoKdU4' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zCcVAkLG3xJmV'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:00:19 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEEd2eZvKYlo2Cgn4oRvdG' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zCdq9PXXhI21W'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:00:54 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEFD2eZvKYlo2C8M5Nopgz' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zCeP4chHIWqUY'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:17:08 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEUv2eZvKYlo2ClLwnUxrj' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zCulyyEFAsfcV'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:22:21 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEZx2eZvKYlo2CyExZHLjQ' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zD0XOWBVYzKux'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:25:15 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEcm2eZvKYlo2Cxhlab6xm' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zD2IDsJK0JxRY'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:26:00 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEdV2eZvKYlo2CplxqwThj' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zD317hwNtOL4y'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:28:53 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEgI2eZvKYlo2CBx9lNUpr' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zD6UP9gXiKDMs'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/p in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 20:31:44 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jEj32eZvKYlo2CaCMH6tFW' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zD9rtpfaDCbJt'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/p in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 21:48:31 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: cus_7zDFpv0NwhXmf3' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zEOph9Fnvm3ZZ'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 21:49:49 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: cus_7zDFpv0NwhXmf3' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zEPytK0ZyIqw8'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 21:52:32 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zESfzbH7NHKHN'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 21:54:18 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Missing required param: amount.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zET8cj8zhvpLE'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/w in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 22:34:03 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zF7S9skqKwdXe'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 22:34:32 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zF8znOCsR75GC'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 22:34:55 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zF8TcwvAR46Yi'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 22:35:59 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zF9Jptkh9yLEX'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 22:36:22 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zFA6l50Rt5HyE'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 22:36:42 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zFAeYXbxX4E07'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 22:37:35 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Must provide source or customer.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zFBlMWU7BrEdw'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_html/ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 23:33:31 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jHYy2eZvKYlo2CFCPWl01a' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zG5jAgSMmBd4Y'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 23:35:15 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jHad2eZvKYlo2CNi4srQHC' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zG6Tm80nxahD6'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 23:38:24 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jHdh2eZvKYlo2C6dm6j0xq' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGAnPuZmkyDaO'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 23:41:15 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jHgR2eZvKYlo2CvG582b3X' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGCYgAD523O3J'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 23:43:40 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jHin2eZvKYlo2CWWhxziMO' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGFPDWHHFMZmp'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 23:45:45 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jHko2eZvKYlo2Chb2xdRPK' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGHzMjOsku8vh'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[27-Feb-2016 23:58:12 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jHwq2eZvKYlo2CyDBzWO98' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGTJ8nZFMV4uA'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[28-Feb-2016 00:03:16 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jI1k2eZvKYlo2CsyaFvorS' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGYerJim41xPJ'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[28-Feb-2016 00:04:44 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jI3A2eZvKYlo2CB4KCZnWU' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGacUMGbnkp6l'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[28-Feb-2016 00:06:28 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jI4k2eZvKYlo2CqoKEXZmA' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGcpUlzjQtUMo'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[28-Feb-2016 00:08:58 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such token: tok_17jI7G2eZvKYlo2CsLWA797g' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGe9MJMKmQCUx'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/customers', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/customers', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Customer.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutma in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[28-Feb-2016 00:28:29 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'Amount must be no more than $999,999.99' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zGyC9whlIxiQ9'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/publi in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[28-Feb-2016 06:32:56 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'You have passed a blank string for 'customer'. You should remove the 'customer' parameter from your request or supply a non-blank value.' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_7zMqJnuqGN4EJv'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe- in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[10-Mar-2016 22:35:07 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\InvalidRequest' with message 'No such customer: cus_83jpV7Ozztj5uZ' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php:103 from API request 'req_83jqt72n00Bjuv'
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(222): Stripe\ApiRequestor->handleApiError('{\n  "error": {\n...', 400, Array, Array)
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(60): Stripe\ApiRequestor->_interpretResponse('{\n  "error": {\n...', 400, Array)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(108): Stripe\ApiRequestor->request('post', '/v1/charges', Array, Array)
+#3 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiResource.php(148): Stripe\ApiResource::_staticRequest('post', '/v1/charges', Array, NULL)
+#4 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/Charge.php(37): Stripe\ApiResource::_create(Array, NULL)
+#5 /home/sgrutman978/public_h in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php on line 103
+[11-Mar-2016 06:06:44 UTC] PHP Fatal error:  Uncaught exception 'Stripe\Error\ApiConnection' with message 'Could not connect to Stripe (https://api.stripe.com/v1/customers).  Please check your internet connection and try again.  If this problem persists, you should check Stripe's service status at https://twitter.com/stripestatus, or let us know at support@stripe.com.
+
+(Network error [errno 6]: Couldn't resolve host 'api.stripe.com')' in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/HttpClient/CurlClient.php:182
+Stack trace:
+#0 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/HttpClient/CurlClient.php(144): Stripe\HttpClient\CurlClient->handleCurlError('https://api.str...', 6, 'Couldn't resolv...')
+#1 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(184): Stripe\HttpClient\CurlClient->request('post', 'https://api.str...', Array, Array, false)
+#2 /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/ApiRequestor.php(59): Stripe\ApiRequestor->_requestRaw('post', '/v1/customers', Array, Array)
+ in /home/sgrutman978/public_html/wristband/stripe-php-3.9.1/lib/HttpClient/CurlClient.php on line 182

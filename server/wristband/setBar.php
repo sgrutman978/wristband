@@ -1,0 +1,1 @@
+<?php echo 'https://chart.googleapis.com/chart?cht=qr&chs=180x180&chl='.urlencode('http://www.stevengrutman.com/wristband/check.php?amount=-1&bar=acct_181NEgCm4OLnZxvi&id=-1'); ?>

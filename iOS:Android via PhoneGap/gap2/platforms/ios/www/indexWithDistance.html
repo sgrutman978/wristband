@@ -1,0 +1,912 @@
+<body style="padding:0px;margin:0">
+    <!--<preference name="DisallowOverscroll" value="true" />-->
+    
+   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+         <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+        
+
+ <head>
+  <meta name="msapplication-tap-highlight" content="no" /> 
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- <script src="https://checkout.stripe.com/v2/checkout.js"></script>-->
+   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+         <style>
+        .bigBoxes{
+          width:100%;
+         position:relative;
+         height:200px;
+        }
+        .bigImage{
+          width:100%;
+          height:100%;
+        }
+        body{
+          padding:0;
+          margin:0;
+          -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        .distance{
+          bottom:8px;
+          right:8px;
+          float:right;
+          position:absolute;
+          color:rgb(52,152,219);
+          font-size:21px;
+        }
+          .barName{
+          bottom:8px;
+          left:8px;
+          float:right;
+          position:absolute;
+          color:white;
+          font-size:21px;
+        }
+        .middleBarName{
+          color:white;
+          bottom:8px;
+            font-size:35px;
+            position:absolute;
+              margin:auto;
+        }
+        #body0{
+          text-align:center;
+          width:100%;
+          height:100%;
+          position:fixed;
+          left:0px;
+          top:0px;
+          z-index:1000;
+          background-color: rgb(52,152,219);
+          display:none;
+          /*background-image:url("http://live-wallpaper.net/iphone/img/app/i/p/iphone-wallpaper-christmas-lights-i17_9cad8a0df499ba9ff537fc715e0a167e_raw.jpg");*/
+        }
+        #body0 input[type="text"],  #body0 input[type="password"] {
+height:40px;
+width:100%;
+border-radius:3px;
+border:none;
+margin-top:6px;
+font-size:18px;
+        }
+        #middle1, #middle2, #middle3{
+  position: relative;
+  width:94%;
+  margin:auto;
+  text-align:center;
+  top: 50%;
+  transform: translateY(-50%);
+        }
+        #middle2{
+          display:none;
+        }
+        #middle3{
+          display:none;
+        }
+       
+        #loginSwitch1,  #loginSwitch2{
+background-color:rgb(52,152,219);
+color:white;
+margin-top:8px;
+        }
+        .submitLogin{
+          background-color:lightgrey;
+color:rgb(52,152,219);
+width:200px;
+height:60px;
+font-size:35px;
+margin-top:13px;
+border-radius:5px;
+        }
+        #body1{
+          opacity:0;
+          width:100%;
+          height:100%;
+          position:absolute;
+          left:0px;
+          top:75px;
+        }
+        #body2{
+          opacity:0;
+          width:300px;
+          height:300px;
+          position:fixed;
+          top:-1000px;
+          left:-1000px;
+        }
+         #body3{
+          width:100%;
+          height:100%;
+          position:absolute;
+          left:100%;
+          top:75px;
+          z-index:1;
+          background-color:white;
+          display:none;
+        }
+        #body4{
+          z-index:2;
+          position:fixed;
+          top:75px;
+          left:0px;
+           width:100%;
+          height:100%;
+           background-color:white;
+           display:none;
+           overflow-y:visible;
+        }
+           #body5{
+          z-index:15;
+          position:fixed;
+          top:0px;
+          left:0px;
+           width:100%;
+          height:100%;
+          background-color:rgba(0,0,0,.5);
+          opacity:0;
+           display:none;
+           overflow-y:hidden;
+           justify-content: center;
+          align-items: center;
+        }
+        #body6{
+          z-index:18;
+          position:fixed;
+          top:-100%;
+          left:0px;
+           width:100%;
+          height:100%;
+          background-color: rgb(52,152,219);
+          padding-top: 75px;
+           overflow:hidden;
+        }
+        #topBar{
+          height:75px;
+          background-color:white;
+          z-index:100;
+          width:100%;
+          position:fixed;
+          top:0px;
+          left:0px;
+          text-align: center;
+          color:rgb(52,152,219);
+        }
+        #left{
+         /* font-size:40px;*/
+          position:fixed;
+          top:32px;
+          left:10px;
+          width:30px;
+          height:40px;
+          text-align: center;
+        }
+         #right{
+          /*font-size:170px;*/
+          position:fixed;
+          top:30px;
+          /*background-color: green;*/
+          right:13px;
+          width:40px;
+          height:40px;
+           display: flex;
+           justify-content: center;
+          align-items: center;
+
+           -webkit-transition: -webkit-transform .5s;
+    -webkit-transform: rotate(0deg); 
+    -moz-transform: rotate(0deg);
+        }
+         #middle{
+           font-size:40px;
+          position:relative;
+          top:15px;
+          margin:auto;
+          position:relative;
+        }
+#payCover{
+  background-color:rgb(52,152,219);
+  width:100%;
+  border:none;
+  height:75px;
+  font-size:50px;
+  color:white;
+  font-family: Arial;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  display:none;
+  z-index:3;
+}
+#frame1{
+  z-index: 100000000;
+  width:180px;
+  height:180px;
+  border:none;
+}
+#logo{
+  height:60px;
+}
+#saveL{
+  background-color:rgb(52,152,219);
+  color:lightgrey;
+  width:170px;
+  height:40px;
+  font-size:27px;
+  border-radius:20px;
+  position:absolute;
+ bottom:0px;
+ left:5px;
+  padding-top:4px;
+  margin:auto;
+}
+.menuOption{
+  margin-top:20px;
+  font-size:55px;
+  font-family:arial;
+  text-align:center;
+  color:white;
+  /*height:85px;*/
+  width:100%;
+  position:relative;
+  /*border-bottom: 2px solid black;*/
+}
+        </style>
+    </head>
+
+ <div id="body0">
+   <div id="middle1">
+    <img src="http://stevengrutman.com/wristband/clearLogo.png" style="width:94%;margin-bottom:8px">
+  <input type="text" placeholder="E-mail" id="loginEmail"></br>
+   <input type="password" placeholder="Password" id="loginPassword"></br>
+    <button class="submitLogin" id="loginSubmit">Login</button></br>
+    <div id="loginSwitch1">Sign Up</div>
+  </div>
+  <div id="middle2">
+     <img src="http://stevengrutman.com/wristband/clearLogo.png" style="width:94%;margin-bottom:8px">
+  <input type="text" placeholder="E-mail" id="createEmail"></br>
+<input type="password" placeholder="Password" id="createPassword">
+<input type="password" placeholder="Verify Password" id="createPassword2"></br>
+<button class="submitLogin" id="createSubmit">Continue</button>
+   <div id="loginSwitch2">Login</div>
+</div>
+
+<div id="middle3">
+   <img src="http://stevengrutman.com/wristband/clearLogo.png" style="width:94%;margin-bottom:8px">
+<form action="http://stevengrutman.com/wristband/charge.php?mode=0" target="frame1" method="POST" id="payment-form">
+  <span class="payment-errors"></span>
+
+  <div class="form-row">
+      <input type="password" size="20" placeholder="Card Number" data-stripe="number"/>
+  </div>
+
+  <div class="form-row">
+      <input type="password" size="4" style="font-size:15px;float:left;width:30%" placeholder="CVC" data-stripe="cvc"/>
+      <input type="text" size="2" style="font-size:15px;float:left;width:20%;margin-left:5%" placeholder="MM" data-stripe="exp-month"/>
+    <input type="text" size="4" style="font-size:14px;float:left;width:40%;margin-left:5%" placeholder="YYYY" data-stripe="exp-year"/>
+  </div>
+  <button class="submitLogin" type="submit">Sign Up</button></br>
+</form>
+<div id="loginSwitch3">Login</div>
+</div>
+ </div>
+
+ <div id="body6">
+<div class="menuOption">My Tickets</div>
+  <div class="menuOption">Change Card</div>
+   <div class="menuOption">Log Out</div>
+ </div>
+ <div id="body1"></div>
+ <div id="body2"></div>
+  <div id="body3"></div>
+    <div id="body4"></div>
+      <div id="body5">
+ <div style="width:180px;height:233px;text-align:center;position:relative"><iframe src="" name="frame1" id="frame1" onLoad="showCode()"></iframe></br>
+ <div id="saveL">Save for later</div></div>
+      </div>
+ <div id="topBar"><span id="left"> </span><span id="right"><i class='fa fa-bars fa-2x'></i></span>
+  <span id="middle"><img id="logo" src="http://stevengrutman.com/wristband/logo.png" /></span></div>
+
+   <button id="payCover">
+        Pay Cover
+      </button>
+     <form id="makeTicket" action="http://stevengrutman.com/wristband/charge.php?mode=1" method="POST" target="frame1"></form>
+
+
+    <script type="text/javascript" charset="utf-8">
+
+
+
+
+var lat = 0.0;
+var longi = 0.0;
+var ok = true;
+ var distance;
+ var dfd = $.Deferred();
+ var counter = 0;
+ var arr1 = [];
+ var tempScrollTop;
+
+ var stripeBar = 0;
+ var stripeAmount = 52;
+  var stripePassword = "1234";
+  var stripeEmail = 'stevengrutman@gmail.com';
+  var customer = "-100";
+
+ $(document).ready(function(){
+   $("#body1").css("height",  $("#body1").height()-75 +"px");
+    $("#body3").css("height",  $("#body3").height()-75 +"px");
+     $("#body4").css("height",  $("#body4").height()-75 +"px");
+     startup();
+     login(-1);
+ });
+
+  // document.addEventListener('deviceready', function(){
+  //  startup();
+  //       }, false);
+
+$("#loginSwitch1").click(function(){
+$("#middle1").css("display", "none");
+$("#middle2").css("display", "block");
+$("#middle3").css("display", "none");
+});
+
+$("#loginSwitch2").click(function(){
+$("#middle2").css("display", "none");
+$("#middle1").css("display", "block");
+$("#middle3").css("display", "none");
+});
+
+$("#loginSwitch3").click(function(){
+$("#middle2").css("display", "none");
+$("#middle1").css("display", "block");
+$("#middle3").css("display", "none");
+});
+
+$("#loginSubmit").click(function(){
+var ref = new Firebase("https://blistering-fire-195.firebaseio.com");
+  ref.authWithPassword({
+  email    : $("#loginEmail").val(),
+  password : $("#loginPassword").val()
+}, function(error, authData) {
+  if (error) {
+   alert("Login Failed!", error);
+  } else {
+     window.localStorage.setItem("email", $("#loginEmail").val());
+      window.localStorage.setItem("pass", $("#loginPassword").val());
+stripeEmail = $("#loginEmail").val();
+   stripePassword = $("#loginPassword").val();
+$("#body0").animate({
+    opacity: "0"
+   }, 500, function(){
+    $("#body0").css("display", "none");
+   });
+  }
+});
+});
+
+Stripe.setPublishableKey('pk_test_OVthqeUy3jeSH9IEpEDhfLKu');
+
+jQuery(function($) {
+  $('#payment-form').submit(function(event) {
+    var $form = $(this);
+
+    // Disable the submit button to prevent repeated clicks
+    $form.find('button').prop('disabled', true);
+
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from submitting with the default action
+    return false;
+  });
+});
+
+function stripeResponseHandler(status, response) {
+  var $form = $('#payment-form');
+
+  if (response.error) {
+    // Show the errors on the form
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('button').prop('disabled', false);
+  } else {
+   // response contains id and card, which contains additional card details
+    var token = response.id;
+    // Insert the token into the form so it gets submitted to the server
+    $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+      $form.append($('<input type="hidden" name="stripeEmail" />').val($("#createEmail").val()));
+
+       $form.append($('<input type="hidden" name="stripePassword" />').val($("#createPassword").val()));
+    window.localStorage.setItem("email", $("#createEmail").val());
+      window.localStorage.setItem("pass", $("#createPassword").val());
+      login(1);
+
+    // and submit
+    mode2=0;
+    $form.get(0).submit();
+  }
+$form.find('button').prop('disabled', false);
+}
+
+
+$("#createSubmit").click(function(){
+if($("#createPassword").val() == $("#createPassword2").val()){
+        var ref = new Firebase("https://blistering-fire-195.firebaseio.com");
+ref.createUser({
+  email: $("#createEmail").val(),
+  password: $("#createPassword").val()
+}, function(error, userData) {
+  if (error) {
+    switch (error.code) {
+      case "EMAIL_TAKEN":
+        alert("The new user account cannot be created because the email is already in use.");
+        break;
+      case "INVALID_EMAIL":
+        alert("The specified email is not a valid email.");
+        break;
+      default:
+        alert("Error creating user.");
+    }
+  } else {
+      $("#middle2").css("display", "none");
+$("#middle1").css("display", "none");
+$("#middle3").css("display", "block");
+    }
+  });
+}else{
+alert("Passwords do not match!");
+}
+});
+
+
+function login(mode){
+try {
+    var keyemail = window.localStorage.getItem("email");
+   var keypass = window.localStorage.getItem("pass");
+   var ref = new Firebase("https://blistering-fire-195.firebaseio.com");
+  ref.authWithPassword({
+  email    : keyemail,
+  password : keypass
+}, function(error, authData) {
+  if (error) {
+     if(mode == 0){
+$("#body0").css("display", "block");
+}
+  } else {
+     var ref2 = new Firebase("https://blistering-fire-195.firebaseio.com/users/"+authData.uid+"");
+    if(mode == 1){
+    ref2.update({
+    email: keyemail,
+    birth: "5697"
+});
+  }else{
+ref2.child('customer').on("value", function(snapshot) {
+  customer = snapshot.val();
+});
+  }
+stripeEmail = keyemail;
+   stripePassword = keypass;
+    $("#body0").css("display", "none");
+  }
+});
+}
+catch(err) {
+  if(mode == 0){
+     $("#body0").css("display", "block");
+   }
+}
+
+}
+
+
+function startup(){
+dfd.done(function(){
+   onDeviceReady();
+ }).done(function(){
+  setupStuff();
+ }).done(function(){
+    setupStuff2();
+ });
+ dfd.resolve();
+ $(".bigBoxes").css("height", Math.floor($(".bigBoxes").width()/1.5) + "px");
+}
+
+function setupStuff(){
+ //startAt(97).endAt(98).
+ var scoresRef = new Firebase("https://blistering-fire-195.firebaseio.com/bars");
+    scoresRef.orderByChild("lat").startAt(lat-1).endAt(lat+1).on("value", function(snapshot) {
+      arr1=[];
+  snapshot.forEach(function(data) {
+    if(Math.abs(data.child("longi").val()-longi) <= 1){
+    distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(lat,longi), new google.maps.LatLng(data.child("lat").val(),data.child("longi").val())); 
+  //  alert(distance);
+arr1.push((Math.round((distance*0.000621371192) * 10 ) / 10));
+arr1.sort(function(a, b){return a-b});
+}
+  });
+}); 
+}
+
+function setupStuff2(){
+  var scoresRef = new Firebase("https://blistering-fire-195.firebaseio.com/bars");
+  scoresRef.orderByChild("lat").startAt(lat-1).endAt(lat+1).on("value", function(snapshot) {
+ //  document.getElementById("body1").innerHTML = " ";
+   counter = 0;
+  snapshot.forEach(function(data) {
+    if(Math.abs(data.child("longi").val()-longi) <= 1){
+      //alert(data.child("id").val() + " " + data.child("longi").val() + " " + data.child("lat").val() + " " + lat + " " + longi);  
+    distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(lat,longi), new google.maps.LatLng(data.child("lat").val(),data.child("longi").val()));    
+//alert(distance);
+counter++;
+var dist = ((Math.round((distance*0.000621371192) * 10 ) / 10));
+ arr1[arr1.indexOf(dist)] = "<div class='bigBoxes' id='"+data.child("id").val()+"'><img src='http://stevengrutman.com/wristband/" + data.child("pic").val() + "' class='bigImage' /><div class='barName'>"+data.child("barName").val()+"</div><div class='distance' id='" + data.child("id").val() +  "'><i class='fa fa-map-marker'></i> " + dist + "</div></div>";
+ //document.getElementById("r"+data.child("id").val()+"").innerHTML = (Math.round((distance*0.000621371192) * 10 ) / 10);
+}
+  });
+
+setTimeout(function(){
+  //alert(counter+""+arr1.length);
+  if(counter == arr1.length){
+  document.getElementById("body2").innerHTML = " ";
+for(var ii = 0; ii < arr1.length;ii++){
+  $("#body2").append(arr1[ii]);
+}
+setTimeout(function(){
+$("#body1").html($("#body2").html());
+$(".bigBoxes").css("height", Math.floor($(".bigBoxes").width()/1.5) + "px");
+},100);
+$(".bigBoxes").css("height", Math.floor($(".bigBoxes").width()/1.5) + "px");
+}
+}, 500);
+    $(".bigBoxes").css("height", Math.floor($(".bigBoxes").width()/1.5) + "px");
+}); 
+}
+
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        // var deferred = $.Deferred();
+        // deferred.resolve();
+        // return deferred.promise();
+    }
+
+var onSuccess = function(position) {
+  lat = position.coords.latitude;
+  longi = position.coords.longitude;
+  // alert(lat + "  " + longi);
+  //   alert('Latitude: '          + position.coords.latitude          + '\n' +
+  //         'Longitude: '         + position.coords.longitude         + '\n' +
+  //         'Altitude: '          + position.coords.altitude          + '\n' +
+  //         'Accuracy: '          + position.coords.accuracy          + '\n' +
+  //         'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+  //         'Heading: '           + position.coords.heading           + '\n' +
+  //         'Speed: '             + position.coords.speed             + '\n' +
+  //         'Timestamp: '         + position.timestamp                + '\n');
+
+};
+
+function onError(error) {
+    // alert('code: '    + error.code    + '\n' +
+    //       'message: ' + error.message + '\n');
+}
+var timer3 = setInterval(function(){
+   startup();
+  $(".bigBoxes").css("height", Math.floor($(".bigBoxes").width()/1.5) + "px");
+          startup2();
+           }, 500);
+
+function startup2(){
+   startup();
+           $(".bigBoxes").css("height", Math.floor($(".bigBoxes").width()/1.5) + "px");
+           if($(".bigBoxes").css("height") != "0px" && document.getElementById("body1").innerHTML != ""){
+            setTimeout(function(){
+  $( "#body1" ).animate({
+          opacity: 1
+          }, 500);
+            },100);
+           clearInterval(timer3);
+
+            timer3 = setInterval(function(){
+          startup();
+           }, 15000);
+
+          }
+}
+
+ window.addEventListener("scroll", ii);
+function ii(){
+ // alert($("#left").html());
+ if($(window).scrollTop() == 0 && !mode){
+$("#left").html(" ");
+ }else{
+  if($("#left").html() == " "){
+  $("#left").html("<i class='fa fa-long-arrow-up fa-2x'></i>");
+}
+ }
+}
+var counter23 = 0;
+  $('#right').click(function(){
+    counter23++;
+    if(counter23%2==1){
+this.style.webkitTransform='rotate(-90deg)';
+$("#body6").animate({
+    top: "0%"
+   }, 500);
+   // , function(){
+// $("#body6").animate({
+//     top: "-18%"
+//    }, 300, function(){
+// $("#body6").animate({
+//     top: "0%"
+//    }, 400);
+//    });
+   // });
+}else{
+  this.style.webkitTransform='rotate(0deg)';
+  $("#body6").animate({
+    top: "-100%"
+   }, 400);
+}
+// $('#right').animate({  borderSpacing: -90 }, {
+//     step: function(now,fx) {
+//       $(this).css('transform','rotate('+now+'deg)');  
+//     },
+//     duration:'medium'
+// },'linear');
+// }else{
+//   $('#right').animate({  borderSpacing: -360 }, {
+//     step: function(now,fx) {
+//       $(this).css('transform','rotate('+now+'deg)');  
+//     },
+//     duration:'medium'
+// },'linear');
+// }
+    });
+
+   $('#saveL').click(function(){
+   $("#body5").animate({
+    opacity: 0
+   }, 500, function(){
+    $("#body5").css("display", "none");
+   });
+    });
+
+   var mode2 = 1;
+
+function showCode(){
+  if(mode2 == 1){
+   $("#body5").css("display", "flex");
+    //$("#body4").html($("#frame1").contents().find("img"));
+ //$("#body5").html($("#frame1").contents().find("img"));
+   $("#body5").animate({
+          opacity: 1
+          }, 500);
+ }
+ mode2 = 1;
+}
+
+  $(document).click(function(){
+     document.getElementById("payCover").innerHTML = "Pay Cover";
+        $('#payCover').css("background-color", "rgb(52,152,219)");
+  });
+
+  $('#payCover').click(function(event){
+    event.stopPropagation();
+    if(this.innerHTML == "Confirm"){
+            var $email = $('<input type=hidden name=stripeEmail />').val(stripeEmail);
+             var $amount = $('<input type=hidden name=stripeAmount />').val(stripeAmount);
+                var $bar = $('<input type=hidden name=stripeBar />').val(stripeBar);
+                 var $password = $('<input type=hidden name=stripePassword />').val(stripePassword);
+                  var $customer = $('<input type=hidden name=customer />').val(customer);
+            $("#makeTicket").append($email).append($amount).append($bar).append($password).append($customer).submit(); 
+      }else{
+         if(customer == "-100"){
+  login(0);
+}
+        document.getElementById("payCover").innerHTML = "Confirm";
+        $('#payCover').css("background-color", "green");
+      }
+        });
+
+ // var stripeImage = "iii";
+
+
+    // $('#stripe-button').click(function(){
+    //       var token = function(res){
+    //        var $id = $('<input type=hidden name=stripeToken />').val(res.id);
+    //         var $email = $('<input type=hidden name=stripeEmail />').val(res.email);
+    //          var $amount = $('<input type=hidden name=stripeAmount />').val(stripeAmount);
+    //             var $bar = $('<input type=hidden name=stripeBar />').val(stripeBar);
+    //              var $password = $('<input type=hidden name=stripePassword />').val(stripePassword);
+    //         $('form').append($id).append($email).append($amount).append($bar).append($password).submit();
+    //       };
+         
+    //       StripeCheckout.open({
+    //         key:         'pk_test_OVthqeUy3jeSH9IEpEDhfLKu',
+    //         amount:      stripeAmount,
+    //         name:        'Wristband, LLC.',
+    //         email: stripeEmail,
+    //         //image:       stripeImage,
+    //         panelLabel:  'Pay Cover: ',
+    //         token:       token
+    //       });
+
+    //       return false;
+    //     });
+
+
+    $('.menuOption').click(function(){
+  if(this.innerHTML == "Change Card"){
+  //   mode2 = 0;
+  // var token = function(res){
+  //          var $id = $('<input type=hidden name=stripeToken />').val(res.id);
+  //           var $email = $('<input type=hidden name=stripeEmail />').val(res.email);
+  //            var $amount = $('<input type=hidden name=stripeAmount />').val(0);
+  //               var $bar = $('<input type=hidden name=stripeBar />').val(-1);
+  //                var $password = $('<input type=hidden name=stripePassword />').val(stripePassword);
+  //           $('form').append($id).append($email).append($amount).append($bar).append($password).submit();
+  //         };
+         
+  //         StripeCheckout.open({
+  //           key:         'pk_test_OVthqeUy3jeSH9IEpEDhfLKu',
+  //           amount:      0,
+  //           name:        'Wristband, LLC.',
+  //           email: stripeEmail,
+  //           //image:       stripeImage,
+  //           panelLabel:  'Set Card',
+  //           token:       token
+  //         });
+
+  //         return false;
+  }
+
+if(this.innerHTML == "Log Out"){
+  window.localStorage.clear();
+    $("#body0").css("display", "block");
+    $("#body0").animate({
+    opacity: "1"
+   }, 500);
+}
+
+ });
+
+
+
+var mode = false;
+$(document).on('click', '.bigBoxes', function(){ 
+   $("#body3").css("margin-top", "0px");
+     $("#body4").css("top", "75px");
+   tempScrollTop = $(window).scrollTop();
+    $("#body3").css("top", tempScrollTop+75+"px");
+  $("#body3").css("display", "block");
+  var scoresRef = new Firebase("https://blistering-fire-195.firebaseio.com/bars");
+  scoresRef.orderByChild("id").startAt(this.id).endAt(this.id).once("value", function(snapshot) {
+    snapshot.forEach(function(data) {
+    stripeAmount = data.child("price").val();
+      stripeBar = data.child("id").val();
+    // stripeImage = data.child("pic").val();
+  $("#body3").html("<div class='bigBoxes'><img src='http://stevengrutman.com/wristband/" + data.child("pic").val() + "' class='bigImage' /><div class='middleBarName'>"+data.child("barName").val()+"</div></div><iframe style='width:100%;height:300px;border:none' src='https://www.google.com/maps/embed/v1/view?key=AIzaSyBrRKsXBaqOOch2-SxNOU6C0teY_-g2GEE&center="+data.child("lat").val()+","+data.child("longi").val()+"&zoom=18&maptype=roadmap'></iframe>");
+//<div class='buttonHolder'>Pay Cover<button id='payCover'>$10</button></div><div class='buttonHolder'>Skip Line & Cover<button id='payCover2'>$25</button></div><div class='buttonHolder'>Open Tab<button id='payCover3'>Open</button></div>
+
+  //https://maps.googleapis.com/maps/api/staticmap?center="+data.child("lat").val()+","+data.child("longi").val()+"&zoom=13&size="+$(window).width()+"x400&maptype=roadmap&markers=color:green%7Clabel:G%7C"+data.child("lat").val()+","+data.child("longi").val()+"&key=AIzaSyBrRKsXBaqOOch2-SxNOU6C0teY_-g2GEE
+     $(".bigBoxes").css("height", Math.floor($(".bigBoxes").width()/1.5) + "px");
+     setTimeout(function(){
+      disableScroll();
+      $( "#body3" ).animate({
+          left: "0%"
+          }, 300, function(){
+         //   setTimeout(function(){
+           $("#body4").html( $("#body3").html());
+               $("#body4").css("display", "block");
+             // $("#body1").css("overflow", "hidden");
+             // $("#body3").css("top", "75px");
+               $("#left").css("top", "15px");
+              $("#left").html("<i class='fa fa-angle-left fa-4x'></i>");
+   mode = true;
+   
+   $("#body3").css("position", "fixed");
+    $("#body1").css("position", "fixed");
+    $(window).scrollTop(0);
+   $("#body4").css("position", "absolute");
+   $("#payCover").css("display", "block");
+              enableScroll();
+          //  }, 100);
+          });
+     },100); 
+  });
+  });
+}); 
+
+$("#left").on('click', function(){ 
+  //$("#left").hasClass("fa-bars")
+  if(mode){
+    disableScroll();
+    var temp3 = $(window).scrollTop();
+    // $("html, body").animate({ scrollTop: "0px" }, 200, function(){
+      $("#body4").css("top", 75-temp3+"px");
+      $("#body4").css("position", "fixed");
+       $("#payCover").css("display", "none");
+    // });
+  setTimeout(function(){
+    //disableScroll();
+     $("#body3").css("position", "absolute");
+    $("#body1").css("position", "absolute");
+      $("#body3").css("top", tempScrollTop+75+"px");
+      $("#body3").css("margin-top", -temp3+"px");
+  $(window).scrollTop(tempScrollTop);
+  $("#body1").css("overflow", "visible");
+   $("#body4").css("display", "none");
+ $( "#body3" ).animate({
+          left: "100%"
+          }, 300, function(){
+             $("#body3").css("display", "none");
+              mode = false;
+              $("#left").html(" ");
+                $("#left").css("top", "32px");
+              ii();
+             enableScroll();
+          });
+}, 100);
+}else{
+  $("html, body").animate({ scrollTop: "0" });
+  ii();
+}
+  });
+        
+
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
+
+</script>
+
+</body>

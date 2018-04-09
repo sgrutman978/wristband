@@ -1,0 +1,176 @@
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+   <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+ <!-- 
+ <form action='/charge' id="form1" method='POST'>
+   <input class="stripe-button-el" type="submit" style="background-color:green;height:100px;width:100px"  />
+  <script
+    src='https://checkout.stripe.com/checkout.js' class='stripe-button'
+    data-key='pk_test_6pRNASCoBOKtIshFeQd4XMUh'
+    data-image='/img/documentation/checkout/marketplace.png'
+    data-name='Bar Name'
+    data-description='Wristband'
+    data-amount='2000'
+    data-locale='auto'>
+  </script>
+</form>  -->
+
+ <button class="btn btn-primary btn-lg" id="stripe-button">
+        Checkout <span class="glyphicon glyphicon-shopping-cart"></span>
+      </button>
+        <iframe src="" name="frame1"></iframe>
+     <form action="http://stevengrutman.com/wristband/charge.php?mode=1" method="POST" target="frame1">
+
+      <script>
+      alert("hi");
+    alert(document.cookie);
+        $('#stripe-button').click(function(){
+          var token = function(res){
+            var $id = $('<input type=hidden name="stripeToken" />').val(res.id);
+            var $email = $('<input type=hidden name="stripeEmail" />').val(res.email);
+             var $amount = $('<input type=hidden name="stripeAmount" />').val(52);
+            $('form').append($id).append($email).append($amount).submit();
+          };
+
+          var amount = 52;
+          var nameI = $("#nameI").val();
+          StripeCheckout.open({
+            key:         'pk_test_OVthqeUy3jeSH9IEpEDhfLKu',
+            amount:      amount,
+            name:        nameI,
+            image:       '{% static "img/marketplace.png" %}',
+            description: 'Purchase Products',
+            panelLabel:  'Checkout',
+            token:       token
+          });
+
+          return false;
+        });
+      </script>
+
+<style>
+body{
+  padding:0px;
+  margin:0px;
+}
+#stripe-button{
+	background-color:green;
+	width:100%;
+	border:none;
+	height:75px;
+	font-size:50px;
+	color:white;
+	font-family: Arial;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+}
+</style>
+<script>
+//  $(document).ready(function(){
+ 
+//  });
+// $('.boxes').click(function(e) {
+//   e.preventDefault();
+//   $('#form1').submit();
+// });
+// </script>
+
+
+<!-- <form action="." method="post">
+        <noscript>You must <a href="http://www.enable-javascript.com" target="_blank">enable JavaScript</a> in your web browser in order to pay via Stripe.</noscript>
+
+        <input 
+            type="submit" 
+            value="Pay $5 Cover"
+            data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+            data-amount="500"
+            data-currency="usd"
+            data-name="Wristband, LLC."
+            data-description="Sample Bar Name"
+            data-email="sgrutman@msn.com"
+        />
+    </form>
+
+
+        <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script>
+    var $button;
+    var $form;
+    var opts 
+            $(':submit').on('click', function(event) {
+                event.preventDefault();
+                 $button = $(this);
+                    $form = $button.parents('form');
+                opts = $.extend({}, $button.data(), {
+                    token: function(result) {
+                        $form.append($('<input>').attr({ type: 'hidden', name: 'stripeToken', value: result.id })).submit();
+                    }
+                });
+                StripeCheckout.open(opts);
+            });
+    
+        </script>
+ -->
+
+<!-- <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<form action="" method="POST" id="payment-form">
+  <span class="payment-errors"></span>
+
+  <div class="form-row">
+    <label>
+      <span>Card Number</span>
+      <input type="text" size="20" data-stripe="number"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>CVC</span>
+      <input type="text" size="4" data-stripe="cvc"/>
+    </label>
+  </div>
+
+  <div class="form-row">
+    <label>
+      <span>Expiration (MM/YYYY)</span>
+      <input type="text" size="2" data-stripe="exp-month"/>
+    </label>
+    <span> / </span>
+    <input type="text" size="4" data-stripe="exp-year"/>
+  </div>
+
+  <button type="submit">Submit Payment</button>
+</form> -->
+
+<script>
+// window.onload = function() {
+//   var startPos;
+//   var geoOptions = {
+//      timeout: 1
+//   }
+
+//   var geoSuccess = function(position) {
+//     startPos = position;
+//     document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+//     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+//   };
+//   var geoError = function(error) {
+//     console.log('Error occurred. Error code: ' + error.code);
+//     // error.code can be:
+//     //   0: unknown error
+//     //   1: permission denied
+//     //   2: position unavailable (error response from location provider)
+//     //   3: timed out
+//   };
+
+//   navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
+// };
+</script>
